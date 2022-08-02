@@ -266,8 +266,8 @@ function buildCharts(sample) {
     ];
     // [Deliverable 1 step 9] Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top 10 Bacteria Cultures Found",
-      margin: { t: 30, l: 150 }
+      title: "<b>Top 10 Bacteria Cultures Found</b>",
+      font: {color: "black", family: "helvetica"}
     };
     
     // [Deliverable 1 step 10] Use Plotly to plot the data with the layout. 
@@ -293,6 +293,7 @@ function buildCharts(sample) {
         marker: {
           size: sample_values,
           color: otu_ids,
+          // Color scale from: https://plotly.com/javascript/colorscales/#picnic-colorscale
           colorscale: "Custom Contour Plot Colorscale"
         }
       }
@@ -300,9 +301,10 @@ function buildCharts(sample) {
 
     // [Deliverable 2 step 2] Create a layout for bubble chart.
     var bubbleLayout = {
-      title: "Bacteria Cultures Per Sample",
+      title: "<b>Bacteria Cultures Per Sample</b>",
       hovermode: "closest",
       xaxis: { title: "OTU ID" },
+      font: {color: "black", family: "helvetica"}
     };
 
     // [Deliverable 2 step 3] Lastly, use the given Plotly.newPlot() function to plot the trace object and layout.
@@ -325,7 +327,7 @@ function buildCharts(sample) {
         // Assign the variable created in Step 3 to the value property.
         value: washFrequency,
         //  For the title object, assign the title as a string using HTML syntax to the text property.
-        title: { text: "<b>Belly Button Washing Frequency</b> <br> <b>Scrubs per Week</b>"},
+        title: { text: "<b>Belly Button Washing Frequency</b> <br> <b>(Scrubs per Week)</b>"},
         // The type property should be "indicator".
         type: "indicator",
         // The mode property should be "gauge+number".
@@ -339,9 +341,9 @@ function buildCharts(sample) {
           steps: [
             { range: [0, 2], color: "red" },
             { range: [2, 4], color: "lightcoral" },
-            { range: [4, 6], color: "orange" },
-            { range: [6, 8], color: "yellowgreen" },
-            { range: [8, 10], color: "lightgreen" }
+            { range: [4, 6], color: "khaki" },
+            { range: [6, 8], color: "lightgreen" },
+            { range: [8, 10], color: "chartreuse" }
           ],
         }
       }
@@ -349,9 +351,10 @@ function buildCharts(sample) {
     
     // [Deliverable 3 step 5] create the layout for the gauge chart making sure that it fits in the <div></div> tag for the gauge id.
     var gaugeLayout = { 
-      width: 550, 
-      height: 450, 
+      width: 490, 
+      height: 400, 
       margin: { t: 0, b: 0 },
+      font: {color: "black", family: "helvetica"}
     };
 
     // [Deliverable 3 step 6] use the Plotly.newPlot() function to plot the trace object and the layout.
@@ -469,13 +472,16 @@ function buildCharts(sample) {
 // Use your knowledge of HTML and Bootstrap to customize the webpage for your dashboard.
 
 // [] 1. Customize your dashboard with three of the following:
-//          [] Add an image to the jumbotron.
-//          [] Add background color or a variety of compatible colors to the webpage.
-//          [] Use a custom font with contrast for the colors.
-//          [] Add more information about the project as a paragraph on the page.
-//          [] Add information about what each graph visualizes, either under or next to each graph.
+//          [x] Add an image to the jumbotron.
+//          [x] Add background color or a variety of compatible colors to the webpage.
+//          [x] Use a custom font with contrast for the colors.
+//          [x] Add more information about the project as a paragraph on the page.
+//          [x] Add information about what each graph visualizes, either under or next to each graph.
 //          [] Make the webpage mobile-responsive.
-//          [] Change the layout of the page.
+//          [x] Change the layout of the page.
 //          [] Add a navigation bar that allows you to select the bar or bubble chart on the page.
-// [] 2. When the dashboard is first opened in a browser, ID 940’s data should be displayed in the dashboard, and the three charts should be working according to their requirements.
-// [] 3. When a sample is selected, the dashboard should display the data in the panel and all three charts according to their requirements.
+//
+// [x] 2. When the dashboard is first opened in a browser, ID 940’s data should be displayed in the dashboard, and the three charts should be working according to their requirements.
+//          in index.html: placeholder="940"
+//
+// [x] 3. When a sample is selected, the dashboard should display the data in the panel and all three charts according to their requirements.
