@@ -1,0 +1,17 @@
+
+/* Instructions for this file found in Module 11.6.3: Customize the Page with CSS
+
+    (Instructions on Module 11, but applied to this Module 12 project.)
+
+    link:
+        https://courses.bootcampspot.com/courses/1225/pages/11-dot-6-3-customize-the-page-with-css?module_item_id=498888
+
+*/
+
+/* Customize the Jumbotron */
+.jumbotron {
+    /* The module has instructions to download nasa.jpg and instert it into the "images" folder. */
+    background-image: url("../images/pinkbacteria.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
