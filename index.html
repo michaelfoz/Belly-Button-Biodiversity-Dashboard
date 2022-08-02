@@ -1,0 +1,164 @@
+<!-- 
+  Self-notes: 
+
+  This file originally downloaded in Module 12.4.3: Belly Button Demographics Panel
+  and modified throughout the module itself.
+  https://courses.bootcampspot.com/courses/1225/pages/12-dot-4-3-belly-button-demographics-panel?module_item_id=499023
+  (plot.js was used in conjunction to the origianl index.html code, but plot.js was renamed to chart.js for the Module 12 Challenge.)
+
+  I used this same file for Module 12 Challenge to display the multiple-chart visualization onto the web browser.
+  (The Module 12 Challenge did not specify which index.html file to use.)
+  https://courses.bootcampspot.com/courses/1225/assignments/24805?module_item_id=499045
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- As expected, the header links to the Bootstrap CDN. -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!--Add the Jumbotron-->
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome!</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+        <p>Michael Foz</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+
+        <!-- Create two HTML elements: (1) the dropdown menu and (2) the panel for the demographic information.-->
+        
+        <!-- This <div> belonging to the well class contains a dropdown menu with an id of selDataset. -->
+        <div class="well">
+          <h5>Test Subject ID No.:</h5> 
+          <!-- Commented out: <select id="selDataset"></select> -->
+          <!-- (1) the dropdown menu -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+
+              <!-- 
+                (The dropdown menu doesn't have any options yet, 
+                and the panel doesn't contain any demographic information. 
+                These will be dynamically generated with information from the dataset.
+                We'll use the data from samples.json to create a dropdown menu of volunteer 
+                (test subject) ID numbers dynamically.) 
+                
+                [refer to chart.js, under the comment "// Dynamically Generate Dropdown Menu Items"]
+              -->
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+
+          <!-- This <div> with an id of sample-metadata is the information panel-->
+          <!-- (2) the panel for the demographic information -->
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/samples.json"></script>
+  <script src="static/js/chart.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+
+<!-- (Start of original code downloaded/untouched):
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          (comment) </-- <select id="selDataset"></select> --/> (end of comment)
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="plots.js"></script>
+
+</body>
+
+</html>
+
+(End of origianl code) -->
+
+
