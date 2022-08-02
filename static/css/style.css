@@ -8,10 +8,28 @@
 
 */
 
+body {
+
+    font-family: Helvetica; 
+
+}
+
+div { background-color: #ffffff;}
+
 /* Customize the Jumbotron */
 .jumbotron {
     /* The module has instructions to download nasa.jpg and instert it into the "images" folder. */
-    background-image: url("../images/pinkbacteria.jpg");
-    background-size: 100% 100%;
+    background-image: url("https://raw.githubusercontent.com/michaelfoz/Belly-Button-Biodiversity-Dashboard/main/static/images/pinkbacteria_fromrawpixel.jpg");
+    background-size: 100% 175%;
     text-align: center;
 }
+
+.jumbotron h1{
+    color: #ffffff;
+}
+
+.jumbotron p{
+    color: #ffffff;
+}
+
+#selDataset { background: #808080; }
