@@ -18,19 +18,26 @@
 <!-- As expected, the header links to the Bootstrap CDN. -->
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Change title of document to "Bellybutton Biodiversity"-->
   <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--Add a link to Bootstrap's content delivery network (CDN)-->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+
+  />
+  <!-- Add a link to our stylesheet under the link to Bootrstrap's CDN-->
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
-
-  <!--Add the Jumbotron-->
-  <div class="jumbotron">
-    <h1 class="display-4">Welcome!</h1>
-  </div>
-
+  <style>
+    body {
+      background-color: #808080;
+    }
+    </style>
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
@@ -39,6 +46,14 @@
         <p>Michael Foz</p>
       </div>
     </div>
+
+    <div class="panel panel-primary">
+      <h1>Welcome to my project! :-)</h1>
+      <p>Please feel free to use the dropdown menu below on the left-most column of this page.  The dropdown allows the user [you] to select an ID Number of a person who volunteered to have samples collected from their naval (belly-button).  Upon doing so, this dynamically generates/displays (1) demographics of said case-study volunteer, (2) the frequency in which the volunteer washes their belly-button throughout the week (displayed in a gauge chart in the center of the page), (3) a bar chart on the right-most column of the page which displays all of the bacterial specimen(s) found inside of the volunteer's bellybutton, and (4) a bubble chart at the bottom of the page which displays Bacteria Cultures Per Sample. </p>
+      <p>All of the information displayed on this page comes from a .json file. (<a href="https://github.com/michaelfoz/Belly-Button-Biodiversity-Dashboard/blob/main/static/js/samples.json">Please click here if you would like to view the .json file</a>)</p>
+      <p></p>
+    </div>
+
     <div class="row">
       <div class="col-md-2">
 
@@ -46,10 +61,10 @@
         
         <!-- This <div> belonging to the well class contains a dropdown menu with an id of selDataset. -->
         <div class="well">
-          <h5>Test Subject ID No.:</h5> 
+          <h6>Test Subject ID No.:</h6> 
           <!-- Commented out: <select id="selDataset"></select> -->
           <!-- (1) the dropdown menu -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset" placeholder="940" onchange="optionChanged(this.value)"></select>
         </div>
 
               <!-- 
@@ -61,10 +76,11 @@
                 
                 [refer to chart.js, under the comment "// Dynamically Generate Dropdown Menu Items"]
               -->
+  
 
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+            <h5 class="panel-title">Demographic Info</h5>
           </div>
 
           <!-- This <div> with an id of sample-metadata is the information panel-->
@@ -73,10 +89,10 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        <div id="gauge"></div>
       </div>
       <div class="col-md-5">
-        <div id="gauge"></div>
+        <div id="bar"></div>
       </div>
     </div>
     <div class="row">
