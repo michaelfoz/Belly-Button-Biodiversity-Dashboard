@@ -471,7 +471,7 @@ function buildCharts(sample) {
 // Deliverable 4: Customize the Dashboard (20 points)
 // Use your knowledge of HTML and Bootstrap to customize the webpage for your dashboard.
 
-// [] 1. Customize your dashboard with three of the following:
+// [x] 1. Customize your dashboard with three of the following:
 //          [x] Add an image to the jumbotron.
 //          [x] Add background color or a variety of compatible colors to the webpage.
 //          [x] Use a custom font with contrast for the colors.
